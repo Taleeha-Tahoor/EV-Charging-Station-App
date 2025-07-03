@@ -1,10 +1,30 @@
 import React from 'react'
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Colors from '../../Utils/Colors';
+import { auth } from '@clerk/clerk-expo';
+import { useNavigation } from '@react-navigation/native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function App() {
+    const navigation = useNavigation();
+
+    // const handleGoogleSignIn = async () => {
+    //     try {
+    //         const { createdSessionId, setActive } = await auth().startOAuthFlow({
+    //             strategy: 'oauth_google',
+    //         });
+
+    //         if (createdSessionId) {
+    //             await setActive({ session: createdSessionId });
+    //             console.log('✅ Signed in successfully');
+    //         }
+    //     } catch (err) {
+    //         console.log('❌ Google Sign-in failed:', err);
+    //     }
+    // };
 
     return (
+        <SafeAreaView style={{flex: 1, backgroundColor: '#fff'}}>
         <View style={styles.container}>
             <Image source={require('../../../assets/images/logo2.jpg')}
                 style={styles.logoImage} />
@@ -16,16 +36,16 @@ export default function App() {
                 <Text style={styles.desc}>Find EV charging station near you, plan trip and much more in just one click</Text>
             </View>
 
-            <TouchableOpacity style={styles.btn}>
+            <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Main')}>
                 <Text style={styles.btnText}>Login with Google</Text>
             </TouchableOpacity>
         </View>
+        </SafeAreaView>
     )
 }
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
         marginTop: 30,
         alignItems: 'center',
     },

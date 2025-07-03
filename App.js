@@ -1,16 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack'
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import LoginScreen from './App/Screen/LoginScreen/LoginScreen'
+import TabNavigation from './App/Navigations/TabNavigation'
 import { ClerkProvider, SignedIn, SignedOut } from '@clerk/clerk-expo'
 import { tokenCache } from '@clerk/clerk-expo/token-cache'
+import { NavigationContainer } from '@react-navigation/native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 
 SplashScreen.preventAutoHideAsync();
 
 export default function App() {
+
+  const Stack = createNativeStackNavigator();
 
   const [loaded, error] = useFonts({
     'outfit': require('./assets/fonts/Outfit-Regular.ttf'),
@@ -30,27 +35,20 @@ export default function App() {
   }
 
   return (
-    <ClerkProvider publishableKey={'pk_test_YmVjb21pbmctbXVsbGV0LTU1LmNsZXJrLmFjY291bnRzLmRldiQ'}
-      tokenCache={tokenCache}>
-      <View style={styles.container}>
-        <SignedIn>
-          <Text>You are Signed-in</Text>
-        </SignedIn>
-
-        <SignedOut>
-          <LoginScreen />
-        </SignedOut>
-
-      </View>
-    </ClerkProvider>
+    <SafeAreaProvider>
+      <NavigationContainer>
+      <Stack.Navigator screenOptions={{ headerShown: false, contentStyle: {backgroundColor: 'white'} }}>
+        <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="Main" component={TabNavigation} />
+      </Stack.Navigator>
+    </NavigationContainer>
+    </SafeAreaProvider>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    paddingTop: 40
 
   },
 });
