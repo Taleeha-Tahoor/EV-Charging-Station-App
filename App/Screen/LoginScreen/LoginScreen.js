@@ -37,7 +37,7 @@ export default function App() {
             </View>
 
             <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Main')}>
-                <Text style={styles.btnText}>Login with Google</Text>
+                <Text style={styles.btnText}>Lets Find</Text>
             </TouchableOpacity>
         </View>
         </SafeAreaView>
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
         color: Colors.WHITE,
         textAlign: 'center',
         fontFamily: 'outfit',
-        fontSize: 17,
+        fontSize: 18,
     },
 
 })

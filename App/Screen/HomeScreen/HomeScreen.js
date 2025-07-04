@@ -7,6 +7,7 @@ import Colors from '../../Utils/Colors'
 import Header from './Header'
 import SearchBar from './SearchBar'
 import { useRef } from 'react';
+import PlaceListView from './PlaceListView'
 
 
 export default function HomeScreen() {
@@ -78,6 +79,10 @@ export default function HomeScreen() {
                     </Marker>
 
                 </MapView>
+
+                <View style={styles.placeListContainer}>
+                    <PlaceListView/>
+                </View>
             </SafeAreaView>
         </>
     )
@@ -102,5 +107,12 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+    },
+    placeListContainer: {
+        position: 'absolute',
+        bottom: 10,
+        zIndex: 10,
+        width: '100%',
+        backgroundColor: Colors.WHITE
     }
 });
