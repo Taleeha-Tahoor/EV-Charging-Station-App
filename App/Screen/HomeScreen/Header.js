@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
         marginHorizontal: 20,
     },
   logoImg:{
-    width: 80,
-    height: 70,
+    width: 70,
+    height: 60,
   }
 })
