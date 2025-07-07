@@ -43,7 +43,52 @@ export const EVStationsData = [
     latitude: 33.5281,
     longitude: 73.1193,
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-7SGaokdo9C0OFjFQAlIMiFMh9cgMbzwkZQ&s'
-  },]
+  },
+  {
+    id: 5,
+    name: 'F-11 Markaz EV Station',
+    address: 'F-11 Markaz, Islamabad',
+    points: 6,
+    latitude: 33.6912,
+    longitude: 72.9800,
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT84im7Qv6i3MzbNvghE-EqQTUV9Ix4laJ3Kw&s'
+  },
+  {
+    id: 6,
+    name: 'F-10 EV Station',
+    address: 'F-10 Markaz, Islamabad',
+    points: 5,
+    latitude: 33.6960,
+    longitude: 72.9902,
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOKVIzV6XF9RltvTUTciVCZVmnYLMqQVD4Lg&s'
+  },
+  {
+    id: 7,
+    name: 'G-11 Grid EV Station',
+    address: 'G-11/3, Islamabad',
+    points: 7,
+    latitude: 33.6938,
+    longitude: 72.9759,
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-OED62aWX-Fzxsy7n4IRl0Frub99CdnOG0Q&s'
+  },
+  {
+    id: 8,
+    name: 'F-6 Super EV Station',
+    address: 'Super Market, F-6, Islamabad',
+    points: 4,
+    latitude: 33.7254,
+    longitude: 73.0615,
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy03S-w7RYugZWg3uffhBUEo0I2auEsL6WUg&s'
+  },
+  {
+    id: 9,
+    name: 'E-11 EV Charging Point',
+    address: 'E-11/4, Islamabad',
+    points: 6,
+    latitude: 33.7075,
+    longitude: 72.9872,
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGFsNMpQmY49Ipzb7-pWP1zZa0Ft4D1Zkn1Q&s'
+  }]
 //   {
 //     id: 6,
 //     name: 'Giga Mall Charging',
