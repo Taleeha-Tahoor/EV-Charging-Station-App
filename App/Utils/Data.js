@@ -236,32 +236,3 @@ export const EVStationsData = [
 //     points: 4,
 //     image: 'https://via.placeholder.com/150/4682B4/FFFFFF?text=EV+Station+26'
 //   },
-//   {
-//     id: 27,
-//     name: 'Metro Stop EV Point',
-//     address: 'Metro Stop F-8, Islamabad',
-//     points: 3,
-//     image: 'https://via.placeholder.com/150/4682B4/FFFFFF?text=EV+Station+27'
-//   },
-//   {
-//     id: 28,
-//     name: 'Zero Point Station',
-//     address: 'Zero Point, Islamabad',
-//     points: 7,
-//     image: 'https://via.placeholder.com/150/4682B4/FFFFFF?text=EV+Station+28'
-//   },
-//   {
-//     id: 29,
-//     name: 'Chak Shahzad EV Hub',
-//     address: 'Chak Shahzad, Islamabad',
-//     points: 2,
-//     image: 'https://via.placeholder.com/150/4682B4/FFFFFF?text=EV+Station+29'
-//   },
-//   {
-//     id: 30,
-//     name: 'Tarnol Highway Chargers',
-//     address: 'Tarnol, Islamabad',
-//     points: 4,
-//     image: 'https://via.placeholder.com/150/4682B4/FFFFFF?text=EV+Station+30'
-//   }
-// ];
