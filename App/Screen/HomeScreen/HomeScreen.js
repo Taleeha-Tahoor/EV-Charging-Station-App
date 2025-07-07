@@ -8,13 +8,15 @@ import Header from './Header'
 import SearchBar from './SearchBar'
 import { useRef } from 'react';
 import PlaceListView from './PlaceListView'
-
+import Markers from './Markers'
+import { SelectMarkerContext } from '../../Context/SelectMarkerContext'
 
 export default function HomeScreen() {
 
     const [location, setLocation] = useState(null)
     const [error, setError] = useState("");
     const mapRef = useRef(null);
+    const [selectedMarker, setSelectedMarker] = useState([])
 
     useEffect(() => {
         async function getCurrentLocation() {
@@ -45,7 +47,7 @@ export default function HomeScreen() {
     }
 
     return (
-        <>
+        <SelectMarkerContext.Provider value={{selectedMarker, setSelectedMarker}}>
             <SafeAreaView style={{ flex: 1, backgroundColor: 'none' }}>
                 <View style={styles.headerContainer}>
                     <Header />
@@ -78,13 +80,14 @@ export default function HomeScreen() {
                             style={{ width: 30, height: 40, }} />
                     </Marker>
 
+                    <Markers />
                 </MapView>
 
                 <View style={styles.placeListContainer}>
                     <PlaceListView/>
                 </View>
             </SafeAreaView>
-        </>
+        </SelectMarkerContext.Provider>
     )
 
 }

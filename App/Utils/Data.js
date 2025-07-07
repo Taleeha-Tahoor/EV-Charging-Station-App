@@ -1,37 +1,47 @@
 export const EVStationsData = [
   {
-    id: 1,
+    id: 0,
     name: 'Blue Area EV Station',
     address: 'Blue Area, Islamabad',
     points: 4,
+    latitude: 33.7100,
+    longitude: 73.0551,
     image: 'https://images.unsplash.com/photo-1641659376402-3d2f48a91ed7?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGNoYXJnaW5nJTIwc3RhdGlvbnxlbnwwfHwwfHx8MA%3D%3D'
   },
   {
-    id: 2,
+    id: 1,
     name: 'F-10 EV Charging Hub',
     address: 'F-10 Markaz, Islamabad',
     points: 6,
+    latitude: 33.6938,
+    longitude: 73.0169,
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRngU4QThDxYmIMWjpbKmyEVVKKVXoAYuRcAw&s'
   },
   {
-    id: 3,
+    id: 2,
     name: 'G-11 Electric Point',
     address: 'G-11 Markaz, Islamabad',
     points: 3,
+    latitude: 33.6784,
+    longitude: 73.0264,
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSztmMqw0YTmJ59v8ebvHyQxfWTpAhkgmh4oQ&s'
   },
   {
-    id: 4,
+    id: 3,
     name: 'H-8 Power Station',
     address: 'H-8 Sector, Islamabad',
     points: 5,
+    latitude: 33.6935,
+    longitude: 73.0545,
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgebd4yQ_07enJ4iwXW-Kj89cMqnmx15rJ2Q&s'
   },
   {
-    id: 5,
+    id: 4,
     name: 'DHA EV Station',
     address: 'DHA Phase 2, Islamabad',
     points: 7,
+    latitude: 33.5281,
+    longitude: 73.1193,
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-7SGaokdo9C0OFjFQAlIMiFMh9cgMbzwkZQ&s'
   },]
 //   {
