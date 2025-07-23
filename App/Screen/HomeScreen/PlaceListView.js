@@ -73,14 +73,14 @@ const setSelectedMarker = context?.setSelectedMarker;
       <FlatList
         data={dataToShow}
         horizontal={horizontalView}
-        pagingEnabled
+        pagingEnabled={horizontalView}
         ref={flatListRef}
         getItemLayout={getItemLayout}
-        showsHorizontalScrollIndicator={false}
+        showsHorizontalScrollIndicator={true}
         renderItem={({ item, index }) => (
           <View style={styles.container} >
             <LinearGradient
-              colors={['transparent', '#ffffff', '#ffffff']}>
+              colors={['transparent', '#ffffff', ]}>
 
               <Pressable style={{ position: 'absolute', right: 0, margin: 5 }} onPress={() => toggleFav(item)}>
                 <FontAwesome name={isFav(item.id) ? 'heart' : 'heart-o'}
@@ -109,6 +109,7 @@ const setSelectedMarker = context?.setSelectedMarker;
             </LinearGradient>
           </View>
         )}
+        contentContainerStyle={{paddingBottom: 20}}
       />
 
     </View>
@@ -117,7 +118,7 @@ const setSelectedMarker = context?.setSelectedMarker;
 
 const styles = StyleSheet.create({
   container: {
-    width: Dimensions.get('screen').width * 0.95,
+    width: Dimensions.get('screen').width * 0.97,
     margin: 5,
     borderRadius: 10,
   },
